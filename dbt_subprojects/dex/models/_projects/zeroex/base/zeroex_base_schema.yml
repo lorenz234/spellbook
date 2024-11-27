@@ -10,7 +10,7 @@ models:
       tags: ["base","0x","dex_aggregator","dex","aggregator"]
     description: >
         0x API erc20 swaps raw fills (including multihops) and also native swaps thru 0x exchange contracts (without using 0x API) on base
-    tests:
+    data_tests:
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:
             - block_month
@@ -91,7 +91,7 @@ models:
       tags: ["base","0x","dex_aggregator","dex","aggregator"]
     description: >
         0x API erc20 swaps raw fills (deduped) on base
-    tests:
+    data_tests:
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:
             - block_date
@@ -134,7 +134,7 @@ models:
         name: fills_within
         description: "fills in then multihop, if present"          
 
-  - name: zeroex_base_settler_trades 
+  - name: zeroex_v2_base_trades 
     meta:
       blockchain: base
       project: zeroex
@@ -142,8 +142,8 @@ models:
     config:
       tags: ['base','0x','dex_aggregator','dex','aggregator']
     description: >
-        0x API erc20 trades through 0x Settler contracts. No fills, only deduped transactions.
-    tests:
+        0x API erc20 trades through 0x v2 contracts. No fills, only deduped transactions.
+    data_tests:
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:
             - block_month
@@ -151,7 +151,7 @@ models:
             - tx_hash
             - evt_index
       - check_seed:
-          seed_file: ref('zeroex_base_settler_trades_sample')
+          seed_file: ref('zeroex_v2_base_trades_sample')
           match_columns:
             - tx_hash
           check_columns:

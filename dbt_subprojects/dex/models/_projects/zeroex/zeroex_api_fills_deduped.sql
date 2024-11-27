@@ -1,7 +1,7 @@
 {{ config(
      schema = 'zeroex'
         , alias = 'api_fills_deduped'
-        , post_hook='{{ expose_spells(\'["arbitrum", "avalanche_c", "base", "bnb", "celo", "ethereum", "fantom", "optimism", "polygon","scroll", "linea"]\',
+        , post_hook='{{ expose_spells(\'["arbitrum", "avalanche_c", "base", "bnb", "celo", "ethereum", "fantom", "optimism", "polygon","scroll", "linea","blast","mantle"]\',
                                 "project",
                                 "zeroex",
                                 \'["rantum","bakabhai993"]\') }}'
@@ -22,15 +22,17 @@
 ] %}
 
 {% set settler_models = [  
-  ref('zeroex_ethereum_settler_trades')
-  ,ref('zeroex_base_settler_trades')
-  ,ref('zeroex_polygon_settler_trades')
+  ref('zeroex_v2_ethereum_trades')
+  ,ref('zeroex_v2_base_trades')
+  ,ref('zeroex_v2_polygon_trades')
   ,ref('zeroex_optimism_settler_trades')
   ,ref('zeroex_bnb_settler_trades')
   ,ref('zeroex_avalanche_c_settler_trades')
   ,ref('zeroex_arbitrum_settler_trades')
   ,ref('zeroex_scroll_settler_trades')
   ,ref('zeroex_linea_settler_trades')
+  ,ref('zeroex_blast_settler_trades')
+  ,ref('zeroex_mantle_settler_trades')
 ] %}
 
 

@@ -22,6 +22,8 @@ with
         FROM (
             --use this api https://station.jup.ag/api-v6/get-program-id-to-label
             values
+                ('stabble Stable Swap', 'swapNyd8XiQwJ6ianp9snpu4brUqFxadzvHebnAXjJZ'),
+                ('stabble Weighted Swap', 'swapFpHZwjELNnjvThjajtiVmkz3yPQEHjLtka2fwHW'),
                 ('Invariant', 'HyaB3W9q6XdA5xwpU4XnSZV94htfmbmqJXZcEbRaJutt'),
                 ('Saber (Decimals)', 'DecZY86MU5Gj7kppfUCEmd4LbXXuyZH1yHaP2NTqdiZB'),
                 ('Balansol', 'D3BBjqUdCYuP18fNvvMbPAZ8DpcRi4io2EsYHQawJDag'),
@@ -62,7 +64,14 @@ with
                 ('Cropper', 'H8W3ctz92svYg6mkn1UtGfu2aQr2fnUFHM1RhScEtQDt'),
                 ('Sanctum Infinity', '5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx'),
                 ('Token Swap', 'SwaPpA9LAaLfeLi3a68M4DjnLqgtticKg6CnyNwgAC8'),
-                ('Jupiter Perps', 'PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu')
+                ('Jupiter Perps', 'PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu'),
+                ('Guacswap', 'Gswppe6ERWKpUTXvRPfXdzHhiCyJvLadVvXGfdpBqcE1'),
+                ('SolFi', 'SoLFiHG9TfgtdUXUjWAxi3LtvYuFyDLVhBWxdMZxyCe'),
+                ('Pump.fun', '6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P'),
+                ('1DEX', 'DEXYosS6oEGvk8uCDayvwEZz4qEyDJRf9nFgYCaqPMTm'),
+                ('Obric V2', 'obriQD1zbpyLz95G5n7nJe6a4DPjpFwa5XYPoNm113y'),
+                ('Mooshot', 'MoonCVVNZFSYkqNXP6bxHLPL6QQJiMagDL3qcqUQTrG'),
+                ('Fox', 'HyhpEq587ANShDdbx1mP4dTmDZC44CXWft29oYQXDb53')
             ) as v(amm_name, amm)
     )
 
